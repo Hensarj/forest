@@ -1,0 +1,22 @@
+section.hero
+    .hero__socials
+        ul.socials
+            each social in ['vk','github','in']
+                li.socials__item
+                    a(href="").socials__link
+                        +icon(social,'socials__icon')
+    .hero__menu
+        button(type="button").hamburger
+            span.hamburger-box
+                span.hamburger-inner
+    .hero__content
+        +image('titles/portfolio_header.png','page title','title-img')
+        .hero__user-desc
+            .user
+                .user__pic-container
+                    .user__pic
+                        +image('content/avatar.png','user avatar','user__pic-img')
+                .user__info
+                     .user__name Олег Абаляев
+                     .user__desc Личный сайт веб разработчика
+    button(type="button").hero__arrow-down

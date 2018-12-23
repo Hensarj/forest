@@ -1,0 +1,45 @@
+section.about
+    .coll.coll--bg--yellow-greenish
+        .triangle
+            svg(viewbox="0 0 1000 150").triangle__svg
+                polygon(points="0,0 1000,150 0,150").triangle__poligon.triangle__poligon--fill--greenish
+        .about__title
+            h1.title Обо мне
+        .about__user-info
+            .user-info__avatar
+                +image('content/avatar.png','user avatar','user__pic-img')
+            .user-info__title
+                h2.subtitle Кто я
+            .user-info__test.text-block
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae corporis, distinctio dolore fugiat itaque molestiae natus praesentium quod saepe, tempora ullam. Dolore incidunt magnam recusandae saepe tempore ut vel.
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores distinctio dolores error, necessitatibus nihil sed! A animi consequatur error in iusto molestiae quae quis! Doloremque ipsum neque reprehenderit tempore!
+    .coll.coll--bg--twilight-blue
+        .triangle
+            svg(viewbox="0 0 1000 150").triangle__svg
+                polygon(points="0,150 1000,0 1000,150").triangle__poligon
+        .about__right-title
+            h2.subtitle Чем я могу быть вам полезен
+            .about__desc-text.text-block
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, consequatur corporis cupiditate esse, facere fuga ipsum iusto, nisi nobis placeat quaerat quisquam quod sapiente! Cupiditate ea illum obcaecati perferendis ullam?
+        main.about__content
+
+            -
+                var skills = [
+                ['Frontend', ['HTML5', 'CSS3', 'JavaScript & JQuery']],
+                ['Beckend', ['PHP', 'mySQL', 'Node.js & NPM', 'Mongo.db']],
+                ['WorkFlow', ['Git', 'Gulp', 'Bower']],
+                ]
+
+            ul.skills
+                each item in skills
+                    li.skills__item
+                        .skills-row
+                            .skills-row__title #{item[0]}
+                            ul.skills-row__list
+                                each skill in item[1]
+                                    li.skills-row__item
+                                        .skill
+                                            .skill__circles
+                                                .skill__circle.skill__circle--under
+                                                .skill__circle.skill__sircle--above
+                                                .skill__title #{skill}

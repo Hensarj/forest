@@ -1,0 +1,21 @@
+.welcome
+    button.welcome__auth-btn Авторизоваться
+    .welcome__menu
+        .user
+            .user__pic-container
+                .user__pic
+                    +image('content/avatar.png','user avatar','user__pic-img')
+            .user__info
+                .user__name Олег Абаляев
+                .user__desc Личный сайт веб разработчика
+        ul.socials
+            each social in ['vk','github','in']
+                li.socials__item
+                    a(href="").socials__link
+                        +icon(social,'socials__icon')
+        nav.navigation
+            ul.navigation__list
+                each navItem in ['Мои работы','Обо мне','Блог']
+                    .navigation__item
+                        .navigation__link
+                            .navigation__text #{navItem}

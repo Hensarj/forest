@@ -1,0 +1,17 @@
+section.map
+    #google-map
+        .map__content
+            .contacts
+                .cotacts__title
+                    h2.subtitle Контакты
+
+                -
+                    var contacts = [['skype','skype_kdn'], ['email','oleg.abalyaev@gmail.com'],['phone','+79897246357'],['map-marker','Ростов-на-Дону, пр.Королева, д.6/2']]
+
+                ul.cotacts__list
+                    each item in contacts
+                        li.contacts__item
+                            a(href="").contacts-row
+                                .contacts-row__icon
+                                    +icon (item[0],item[0])
+                                a(href="").contacts-row__title #{item[1]}

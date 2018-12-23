@@ -1,0 +1,34 @@
+section.blog
+    .coll
+        .triangle
+            svg(viewbox="0 0 1000 150").triangle__svg
+                polygon(points="0,0 1000,150 0,150").triangle__poligon
+    .coll
+        .triangle
+            svg(viewbox="0 0 1000 150").triangle__svg
+                polygon(points="0,150 1000,0 1000,150").triangle__poligon
+    nav.blog__navigation
+        nav.navigation
+            ul.navigation__list
+                each item in ['Самое важное в SASS','Приемы версти, без которых не обходтся ни один сайт','Самый необходимый набор Gulp плагинов','Почему я выбрал Jade']
+                    li.navigation__item
+                        a(href="").navigation__link
+                            span.navigation__text #{item}
+    .blog__articles
+        -
+            var articles = [
+            ['Самое важное в SASS','22 ноября 2016','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae corporis, distinctio dolore fugiat itaque molestiae natus praesentium quod saepe, tempora ullam. Dolore incidunt magnam recusandae saepe tempore ut vel.'],
+            ['Приемы версти, без которых не обходтся ни один сайт','22 ноября 2016','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae corporis, distinctio dolore fugiat itaque molestiae natus praesentium quod saepe, tempora ullam. Dolore incidunt magnam recusandae saepe tempore ut vel.'],
+            ['Самый необходимый набор Gulp плагинов','13 ноября 2016','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae corporis, distinctio dolore fugiat itaque molestiae natus praesentium quod saepe, tempora ullam. Dolore incidunt magnam recusandae saepe tempore ut vel.'],
+            ['Почему я выбрал Jade','13 ноября 2016','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae corporis, distinctio dolore fugiat itaque molestiae natus praesentium quod saepe, tempora ullam. Dolore incidunt magnam recusandae saepe tempore ut vel.']
+            ]
+
+        ul.articles
+            each item in articles
+                li.articles__item
+                    article.article__block
+                        h3.articles__title
+                            .subtitle #{item[0]}
+                        span.articles__date #{item[1]}
+                        p.articles__text
+                            .text-block #{item[2]}
