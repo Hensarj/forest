@@ -1,0 +1,13 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = 'Блог'
+
+block scripts
+    script(src='about.bundle.js')
+
+block content
+    include ../common/hero.pug
+    include ../common/articles.pug
+    include ../common/footer.pug
+

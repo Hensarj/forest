@@ -1,2 +1,23 @@
 footer.footer
-  h2 Copyright &copy;
+    .footer__col
+        .footer__row
+            span.about-site Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deleniti illo iste odit quibusdam, ratione sint voluptatem. Alias consequatur cum, dolores eum odit reiciendis rerum veritatis? Deserunt recusandae repudiandae rerum.
+    .footer__col
+        .footer__row
+            ul.menu
+                each menuItem in ['Мои работы', 'Обо мне','Блог','Авторизация']
+                    li.menu__item
+                        a.menu__link #{menuItem}
+        .footer__row
+            ul.socials.socials--color--grey
+                each social in ['vk','github','in']
+                    li.socials__item
+                        a(href="").socials__link
+                            +icon(social,'socials__icon')
+    .footer__col
+        .footer__row
+            .footer__text.text-block
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores in laudantium numquam quam quos rem unde veritatis. Ab autem deleniti eaque earum et libero nemo pariatur recusandae similique totam. Aperiam!
+    .footer__author
+        .author Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequuntur perferendis quas. Atque consequatur cum cumque doloribus, et inventore, laborum magnam minima modi molestias perferendis quas recusandae, rerum tenetur ullam!
+            span @ Абаляев Олег | Создано с любоавью в LoftSchool | 2018
